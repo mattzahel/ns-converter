@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Number System Converter</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
     <div class="wrapper">
-        <h1>Number System Converter</h1>
-
+        <h1 class="title">Number System Converter</h1>
 
         <form action="#">
+            <h2 class="headline">Select number system and enter value</h2>
             <select name="system" id="system">
                 <option value="dec">Decimal</option>
                 <option value="bin">Binary</option>
                 <option value="oct">Octal</option>
                 <option value="hex">Hexadecimal</option>
             </select>
-            <input type="text">
+            <input type="number" placeholder="Value">
         </form>
     </div>
 </body>
