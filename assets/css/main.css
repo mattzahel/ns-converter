@@ -51,7 +51,8 @@ form {
     font-weight: 400; }
     form select option {
       font-weight: 300; }
-  form input[type="text"], form input[type="number"] {
+  form input[type="text"],
+  form input[type="number"] {
     border: none;
     border-bottom: 1px solid black;
     background: none;

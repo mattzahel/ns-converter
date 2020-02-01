@@ -34,7 +34,8 @@ form {
     }
   }
 
-  input[type="text"], input[type="number"] {
+  input[type="text"],
+  input[type="number"] {
     border: none;
     border-bottom: 1px solid black;
     background: none;
@@ -47,7 +48,7 @@ form {
 input[type="submit"] {
   margin: 2rem 0;
   padding: 1rem 0;
-  background-color: #6e45e2;
+  background-color: $color-primary;
   color: #fff;
   border: none;
   border-radius: .5rem;
@@ -55,9 +56,9 @@ input[type="submit"] {
   font-size: 1.6rem;
   cursor: pointer;
   transition: background-color .2s ease-in;
-  
+
   &:hover {
-    background-color: #5d34d1;
+    background-color: $color-primary-dark;
   }
 }
 
@@ -66,7 +67,7 @@ input[type="submit"] {
   flex-grow: 1;
   border-radius: 2rem 2rem .5rem .5rem;
   box-shadow: 0rem -.3rem .5rem -.5rem rgba(0, 0, 0, .25);
-  
+
   h2 {
     font-size: 2.2rem;
     margin: 1rem 0 0 3rem;
@@ -88,5 +89,4 @@ input[type="submit"] {
   &__value {
     font-size: 1.6rem;
   }
-
 }
