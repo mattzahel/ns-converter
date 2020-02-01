@@ -15,39 +15,43 @@
         <h1 class="title">Number System Converter</h1>
 
         <form action="#">
-            <h2 class="headline">Select number system and enter value</h2>
+            <h2 class="headline">Select number system and enter the value</h2>
             <select name="system" id="system">
                 <option value="dec">Decimal</option>
                 <option value="bin">Binary</option>
                 <option value="oct">Octal</option>
                 <option value="hex">Hexadecimal</option>
             </select>
-            <input type="number" placeholder="Value">
-            <input type="submit" value="Convert">
+            <input type="number" value="100" placeholder="Value" id="value">
+            <input type="submit" value="Convert" id="convertBtn">
         </form>
 
         <div class="results">
             <h2>Results</h2>
-            <div class="results__block">
-                <h3 class="results__title">Binary</h3>
-                <p class="results__value">
-                    100101010
+            <div class="results__block" id="decBlock">
+                <h3 class="results__title">Decimal</h3>
+                <p class="results__value" id="decResult">
                 </p>
             </div>
-            <div class="results__block">
+            <div class="results__block" id="binBlock">
+                <h3 class="results__title">Binary</h3>
+                <p class="results__value" id="binResult">
+                </p>
+            </div>
+            <div class="results__block" id="octBlock">
                 <h3 class="results__title">Octal</h3>
                 <p class="results__value">
-                    382
                 </p>
             </div>
-            <div class="results__block">
+            <div class="results__block" id="hexBlock">
                 <h3 class="results__title">Hexadecimal</h3>
                 <p class="results__value">
-                    2F9
                 </p>
             </div>
         </div>
     </div>
+
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
