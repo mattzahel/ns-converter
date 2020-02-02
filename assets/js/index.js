@@ -3,7 +3,9 @@ const convertBtn = document
   .addEventListener("click", convert);
 
 const system = document.querySelector("#system");
+
 //Toggle Result Blocks
+document.querySelector("#decBlock").style.display = "none";
 system.addEventListener("change", function () {
   Array.from(document.getElementsByClassName("results__block")).forEach(function (item) {
     if (item.id == `${system.value}Block`) item.style.display = "none";
@@ -20,13 +22,10 @@ function convert(e) {
 
   if (val != "") {
     binResult.innerText = decToBin(val);
+    octResult.innerText = decToOct(val);
+    hexResult.innerText = decToHex(val);
   }
   e.preventDefault();
-};
-
-function decToOct(value) {
-  let n = value;
-  let octal = [];
 };
 
 function decToBin(value) {
@@ -41,6 +40,39 @@ function decToBin(value) {
     .reverse()
     .map(String)
     .join("");
-  console.log(`Binary: ${binary}`);
+  // console.log(`Binary: ${binary}`);
   return binary;
+}
+
+function decToOct(value) {
+  let n = value;
+  let octal = [];
+
+  for (let i = 0; n > 0; i++) {
+    octal[i] = Math.floor(n % 8);
+    n = Math.floor(n / 8);
+  }
+  octal = octal
+    .reverse()
+    .map(String)
+    .join("");
+  // console.log(`Octal: ${octal}`);
+  return octal;
+}
+
+
+function decToHex(value) {
+  let n = value;
+  let hexadecimal = [];
+
+  for (let i = 0; n > 0; i++) {
+    hexadecimal[i] = Math.floor(n % 16);
+    n = Math.floor(n / 16);
+  }
+  hexadecimal = hexadecimal
+    .reverse()
+    .map(String)
+    .join("");
+  // console.log(`Hexadecimal: ${hexadecimal}`);
+  return hexadecimal;
 }
