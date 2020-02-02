@@ -1,4 +1,6 @@
 /node_modules
+/dist
+/.cache
 logs
 *.log
 npm-debug.log*
