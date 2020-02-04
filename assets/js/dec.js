@@ -1,4 +1,6 @@
-export function decToBin(value) {
+import {val, decResult, binResult, octResult, hexResult} from "./handlers";
+
+function decToBin(value) {
   let n = value;
   let binary = [];
 
@@ -14,7 +16,7 @@ export function decToBin(value) {
   return binary;
 }
 
-export function decToOct(value) {
+function decToOct(value) {
   let n = value;
   let octal = [];
 
@@ -30,7 +32,7 @@ export function decToOct(value) {
   return octal;
 }
 
-export function decToHex(value) {
+function decToHex(value) {
   let n = value;
   let hexadecimal = [];
 
@@ -44,4 +46,10 @@ export function decToHex(value) {
     .join("");
   // console.log(`Hexadecimal: ${hexadecimal}`);
   return hexadecimal;
+}
+
+export function convertFromDec() {
+  binResult.innerText = decToBin(val);
+  octResult.innerText = decToOct(val);
+  hexResult.innerText = decToHex(val);
 }

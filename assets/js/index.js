@@ -1,31 +1,19 @@
-import {decToBin, decToOct, decToHex} from "./dec";
+import {convertFromDec} from "./dec";
+import {val} from "./handlers";
+import {numSys, toggleResults} from "./toggleResults";
 
 const convertBtn = document
   .querySelector("#convertBtn")
   .addEventListener("click", convert);
 
-const system = document.querySelector("#system");
-
-//Toggle Result Blocks
-document.querySelector("#decBlock").style.display = "none";
-system.addEventListener("change", function () {
-  Array.from(document.getElementsByClassName("results__block")).forEach(function (item) {
-    if (item.id == `${system.value}Block`) item.style.display = "none";
-    else item.style.display = "block";
-  });
-});
-
 function convert(e) {
-  let val = document.querySelector("#value").value;
-  var decResult = document.querySelector("#decResult");
-  var binResult = document.querySelector("#binResult");
-  var octResult = document.querySelector("#octResult");
-  var hexResult = document.querySelector("#hexResult");
-
   if (val != "") {
-    binResult.innerText = decToBin(val);
-    octResult.innerText = decToOct(val);
-    hexResult.innerText = decToHex(val);
+    switch(numSys.value) {
+      case "dec": convertFromDec(val); break;
+      case "bin": convertFromBin(val); break;
+      case "oct": convertFromOct(val); break;
+      case "hex": convertFromHex(val); break;
+    }
   }
   e.preventDefault();
 };
