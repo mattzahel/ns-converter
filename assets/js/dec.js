@@ -1,4 +1,4 @@
-import {val, decResult, binResult, octResult, hexResult} from "./handlers";
+import {binResult, octResult, hexResult} from "./handlers";
 
 function decToBin(value) {
   let n = value;
@@ -48,8 +48,8 @@ function decToHex(value) {
   return hexadecimal;
 }
 
-export function convertFromDec() {
-  binResult.innerText = decToBin(val);
-  octResult.innerText = decToOct(val);
-  hexResult.innerText = decToHex(val);
+export function convertFromDec(val) {
+  binResult.textContent = decToBin(val);
+  octResult.textContent = decToOct(val);
+  hexResult.textContent = decToHex(val);
 }

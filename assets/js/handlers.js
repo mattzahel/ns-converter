@@ -1,7 +1,8 @@
-let val = document.querySelector("#value").value;
-var decResult = document.querySelector("#decResult");
-var binResult = document.querySelector("#binResult");
-var octResult = document.querySelector("#octResult");
-var hexResult = document.querySelector("#hexResult");
+const numSys = document.querySelector("#system");
+let numVal = document.getElementById("numVal").value;
+const decResult = document.querySelector("#decResult");
+const binResult = document.querySelector("#binResult");
+const octResult = document.querySelector("#octResult");
+const hexResult = document.querySelector("#hexResult");
 
-export {val, decResult, binResult, octResult, hexResult}
+export {numSys, numVal, decResult, binResult, octResult, hexResult}

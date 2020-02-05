@@ -1,19 +1,22 @@
+import {numSys} from "./handlers";
+import {toggleResults} from "./toggleResults";
 import {convertFromDec} from "./dec";
-import {val} from "./handlers";
-import {numSys, toggleResults} from "./toggleResults";
+import {convertFromBin} from "./bin";
 
-const convertBtn = document
-  .querySelector("#convertBtn")
-  .addEventListener("click", convert);
-
-function convert(e) {
-  if (val != "") {
-    switch(numSys.value) {
-      case "dec": convertFromDec(val); break;
-      case "bin": convertFromBin(val); break;
-      case "oct": convertFromOct(val); break;
-      case "hex": convertFromHex(val); break;
-    }
-  }
+document.getElementById("convertForm").addEventListener("submit", function(e) {
+  let numVal = document.getElementById("numVal").value;
+  if(numVal!="") {
+    convert(numVal);
+  };
   e.preventDefault();
+});
+
+
+function convert(number) {
+    switch(numSys.value) {
+      case "dec": convertFromDec(number); break;
+      case "bin": convertFromBin(number); break;
+      case "oct": convertFromOct(number); break;
+      case "hex": convertFromHex(number); break;
+    }
 };
