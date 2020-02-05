@@ -12,7 +12,6 @@ function decToBin(value) {
     .reverse()
     .map(String)
     .join("");
-  // console.log(`Binary: ${binary}`);
   return binary;
 }
 
@@ -28,7 +27,6 @@ function decToOct(value) {
     .reverse()
     .map(String)
     .join("");
-  // console.log(`Octal: ${octal}`);
   return octal;
 }
 
@@ -40,11 +38,12 @@ function decToHex(value) {
     hexadecimal[i] = Math.floor(n % 16);
     n = Math.floor(n / 16);
   }
-  hexadecimal = hexadecimal
-    .reverse()
-    .map(String)
-    .join("");
-  // console.log(`Hexadecimal: ${hexadecimal}`);
+  for(let i=0; i<hexadecimal.length; i++) {
+      hexadecimal[i] = hexadecimal[i]
+        .toString(16)
+        .toUpperCase();
+  }
+  hexadecimal = hexadecimal.reverse().join("")
   return hexadecimal;
 }
 

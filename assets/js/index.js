@@ -4,11 +4,11 @@ import {convertFromDec} from "./dec";
 import {convertFromBin} from "./bin";
 
 document.getElementById("convertForm").addEventListener("submit", function(e) {
+  e.preventDefault();
   let numVal = document.getElementById("numVal").value;
   if(numVal!="") {
     convert(numVal);
   };
-  e.preventDefault();
 });
 
 
