@@ -16,7 +16,8 @@ function binToHex(val) {
 }
 
 export function convertFromBin() {
-  let val = document.getElementById("numVal").value;  decResult.textContent = binToDec(val);
+  let val = document.getElementById("numVal").value;  
+  decResult.textContent = binToDec(val);
   octResult.textContent = binToOct(val);
   hexResult.textContent = binToHex(val);
 }
