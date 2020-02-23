@@ -5,6 +5,7 @@ import {convertFromBin} from "./bin";
 import {convertFromOct} from "./oct";
 import {convertFromHex} from "./hex";
 
+
 document.getElementById("convertForm").addEventListener("submit", function(e) {
   e.preventDefault();
   let numVal = document.getElementById("numVal").value;
