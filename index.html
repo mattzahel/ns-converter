@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number System Converter</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/main.2b755954.css">
+<script src="/main.2b755954.js"></script></head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">Number System Converter</h1>
+
+        <form action="#" id="convertForm">
+            <h2 class="headline">Select number system and enter the value</h2>
+            <select name="system" id="system">
+                <option value="dec">Decimal</option>
+                <option value="bin">Binary</option>
+                <option value="oct">Octal</option>
+                <option value="hex">Hexadecimal</option>
+            </select>
+            <input type="number" placeholder="Value" id="numVal" required="">
+            <input type="submit" value="Convert" id="convertBtn">
+        </form>
+
+        <div class="results results--hidden" id="results">
+            <h2>Results</h2>
+            <div class="results__block" id="decBlock">
+                <h3 class="results__title">Decimal</h3>
+                <p class="results__value" id="decResult">
+                </p>
+            </div>
+            <div class="results__block" id="binBlock">
+                <h3 class="results__title">Binary</h3>
+                <p class="results__value" id="binResult">
+                </p>
+            </div>
+            <div class="results__block" id="octBlock">
+                <h3 class="results__title">Octal</h3>
+                <p class="results__value" id="octResult">
+                </p>
+            </div>
+            <div class="results__block" id="hexBlock">
+                <h3 class="results__title">Hexadecimal</h3>
+                <p class="results__value" id="hexResult">
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js.5c615dc2.js"></script>
+</body>
+
+</html>
