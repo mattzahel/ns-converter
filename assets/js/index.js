@@ -1,4 +1,4 @@
-import {numSys} from "./handlers";
+import {numSys, numVal} from "./handlers";
 import {toggleResults} from "./toggleResults";
 import {convertFromDec} from "./dec";
 import {convertFromBin} from "./bin";
@@ -14,8 +14,8 @@ document.getElementById("convertForm").addEventListener("submit", function(e) {
   };
 });
 
-
 function convert(number) {
+  document.querySelector("#results").classList.remove("results--hidden");
     switch(numSys.value) {
       case "dec": convertFromDec(number); break;
       case "bin": convertFromBin(number); break;

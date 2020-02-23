@@ -1,10 +1,15 @@
 import {numSys, numVal} from "./handlers";
 
+numVal.addEventListener("input", function() {
+  document.querySelector("#results").classList.add("results--hidden");
+});
+
 const toggleResults = () => {
   document.querySelector("#decBlock").style.display = "none";
   numSys.addEventListener("change", function() {
     document.getElementById("numVal").value = '';
-    
+    document.querySelector("#results").classList.add("results--hidden");
+
     if(numSys.value === "hex") {
       numVal.type = "text"
     } else {
