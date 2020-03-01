@@ -4,6 +4,7 @@ numVal.addEventListener("input", function() {
   document.querySelector("#results").classList.add("results--hidden");
 });
 
+
 const toggleResults = () => {
   document.querySelector("#decBlock").style.display = "none";
   numSys.addEventListener("change", function() {

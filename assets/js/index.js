@@ -6,6 +6,17 @@ import {convertFromOct} from "./oct";
 import {convertFromHex} from "./hex";
 
 
+// const checkIfHex = (val) => {
+//   const binRegex = /^[a-fA-F0-9]+$/g;
+//   if(val.match(binRegex) == false) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(checkIfHex("2"));
+
 document.getElementById("convertForm").addEventListener("submit", function(e) {
   e.preventDefault();
   let numVal = document.getElementById("numVal").value;
